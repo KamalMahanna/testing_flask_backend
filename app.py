@@ -3,8 +3,8 @@ from flask_cors import CORS
 import json
 
 app = Flask(__name__)
-# Enable CORS for all routes
-CORS(app, resources={r"/*": {"origins": "*"}})
+# # Enable CORS for all routes
+# CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/ats-score', methods=['POST'])
 def ats_score():
@@ -264,4 +264,5 @@ def ideas_to_project():
         return str(e), 400
 
 if __name__ == '__main__':
-    app.run(debug=True, port=7051)
+    # app.run(debug=True, host='0.0.0.0')
+    app.run()
