@@ -5,6 +5,7 @@ import json
 app = Flask(__name__)
 # # Enable CORS for all routes
 # CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "http://localhost:5174"}})
 
 @app.route('/ats-score', methods=['POST'])
 def ats_score():
